@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvNombreCafe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Café"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Descripción -->
+        <TextView
+            android:id="@+id/tvDescripcionCafe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción del café seleccionado"
+            android:textSize="16sp"
+            android:textColor="#666"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Precio -->
+        <TextView
+            android:id="@+id/tvPrecioCafe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Precio: $0.00"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Stock -->
+        <TextView
+            android:id="@+id/tvStockCafe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stock disponible: 0"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Cantidad a comprar -->
+        <EditText
+            android:id="@+id/etCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cantidad a comprar"
+            android:inputType="number"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Error -->
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#D32F2F"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Total -->
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total a pagar: $0.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Botón de compra -->
+        <Button
+            android:id="@+id/btnComprar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Comprar"
+            android:backgroundTint="#795548"
+            android:textColor="#FFF"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
