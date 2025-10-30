@@ -2,14 +2,11 @@ package com.example.practica_de_clase.Contrato
 
 import com.example.practica_de_clase.Modelo.VariedadCafe
 
-interface CafeContrac {
+interface CafeContract {
 
 
-    /**
-     * Contrato principal que define las interfaces (View y Presenter)
-     * para ambas pantallas: Main (selección de café) y Detail (compra).
-     */
-    interface CafeContract {
+
+
 
         // --- Pantalla Principal (Selección de Café) ---
         interface MainView {
@@ -36,4 +33,3 @@ interface CafeContrac {
             fun cantidadAComprarCambio(cantidad: Int?)
         }
     }
-}

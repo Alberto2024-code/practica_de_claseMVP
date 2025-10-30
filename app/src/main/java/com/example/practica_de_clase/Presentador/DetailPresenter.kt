@@ -1,13 +1,13 @@
 package com.example.practica_de_clase.Presentador
-import  com.example.practica_de_clase.Contrato.CafeContrac
+import  com.example.practica_de_clase.Contrato.CafeContract
 import com.example.practica_de_clase.Modelo.CafeRepository
 import com.example.practica_de_clase.Modelo.VariedadCafe
 import java.text.NumberFormat
 import java.util.Locale
 
-class DetailPresenter  (private val view: CafeContrac.CafeContract.DetailView,
+class DetailPresenter  (private val view: CafeContract.CafeContract.DetailView,
                         private val repository: CafeRepository
-) : CafeContrac.CafeContract.DetailPresenter{
+) : CafeContract.CafeContract.DetailPresenter{
 
     private var currentCafe: VariedadCafe? = null
 

@@ -11,19 +11,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.practica_de_clase.Contrato.CafeContract
 
-// *CORRECCIÓN DE IMPORTS Y NOMBRES*
-// Asegúrate de que los nombres de los paquetes (Contrato, Modelo, Presentador) coincidan
-import com.example.practica_de_clase.Contrato.CafeContrac
+
 import com.example.practica_de_clase.Modelo.CafeRepository
 import com.example.practica_de_clase.Presentador.MainPresent
 
 // Implementa la interfaz MainView dentro de CafeContract
-class MainActivity : AppCompatActivity(), CafeContrac.CafeContract.MainView {
+class MainActivity : AppCompatActivity(), CafeContract.CafeContract.MainView{
 
-    // Cambiado 'present' por 'presenter' y 'MainPresent' por 'MainPresenter'
+
     private lateinit var presenter: MainPresent
-    private lateinit var spinnerCafes: Spinner // Cambiado a spinnerCafes para ser consistente con el uso
+    private lateinit var spinnerCafes: Spinner
     private lateinit var btnVerDetalles: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,7 +76,7 @@ class MainActivity : AppCompatActivity(), CafeContrac.CafeContract.MainView {
     }
 
     override fun navegarADetalles(cafeId: Int) {
-        val intent = Intent(this, CafeContrac.CafeContract.DetailView::class.java)
+        val intent = Intent(this, CafeContract.CafeContract.DetailView::class.java)
         intent.putExtra("CAFE_ID", cafeId) // La constante "CAFE_ID" es una buena práctica
         startActivity(intent)
     }

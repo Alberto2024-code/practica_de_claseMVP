@@ -1,11 +1,10 @@
 package com.example.practica_de_clase.Presentador
-import com.example.practica_de_clase.Contrato.CafeContrac
+import com.example.practica_de_clase.Contrato.CafeContract
 import com.example.practica_de_clase.Modelo.CafeRepository
 import com.example.practica_de_clase.Modelo.VariedadCafe
-import org.jetbrains.annotations.Contract
 
-class MainPresent(private val view: CafeContrac.CafeContract.MainView,private val repository: CafeRepository):
-    CafeContrac.CafeContract.MainPresenter
+class MainPresent(private val view: CafeContract.MainView, private val repository: CafeRepository):
+    CafeContract.MainPresenter
     {
         // Lista completa de cafés obtenida del Modelo
         private var cafes: List<VariedadCafe> = emptyList()
@@ -42,8 +41,6 @@ class MainPresent(private val view: CafeContrac.CafeContract.MainView,private va
                 // 2. Ordena a la Vista navegar a la siguiente pantalla, pasando el ID
                 view.navegarADetalles(idToNavigate)
             } else {
-                // Manejar caso donde no hay nada seleccionado (aunque en un Spinner esto es raro)
-                // Aquí podríamos mostrar un mensaje de error a la vista si fuera necesario.
-            }
+             }
         }
 }
